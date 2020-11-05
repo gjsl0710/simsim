@@ -32,7 +32,7 @@ client.on("guildMemberRemove", (member) => {
 client.on('message', (message) => {
   if(message.author.bot) return;
 
-  if(message.content == '문아 핑') { //자신의 prefix로 시작하고 ping이라고 입력 했을때 ex) !ping
+  if(message.content == '!핑') { //자신의 prefix로 시작하고 ping이라고 입력 했을때 ex) !ping
     const timeTaken = Date.now() - message.createdTimestamp; //timeTaken 이라는 함수를 만들고 timeTaken을  핑으로 지정합니다
     message.channel.send(`${timeTaken}ms 입니당~!`) //서버와의 핑을 출력합니다
   }
