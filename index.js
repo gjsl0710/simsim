@@ -111,9 +111,9 @@ client.on('message', (message) => {
     if(message.member != null) { // 채널에서 공지 쓸 때
       let contents = message.content.slice('!dm'.length);
       let embed = new Discord.RichEmbed()
-        .setAuthor('${message.guild.name} 서버에서 공지를 보냈습니다.')
+        .setAuthor('심심해#0830')
         .setColor('RANDOM')
-        .setFooter(`심심해#0830`)
+        .setFooter(`${message.guild.name} 서버에서 공지보냄`)
         .setTimestamp()
   
       embed.addField('공지내용: ', contents);
@@ -123,7 +123,7 @@ client.on('message', (message) => {
         x.user.send(embed)
       });
   
-      return message.reply('공지가 정상적으로 발송완료했습니다.');
+      return message.reply('공지를 정상적으로 발송했습니다.');
     } else {
       return message.reply('채널에서 실행해주세요.');
     }
